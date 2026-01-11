@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Who posted first in LinkedIn?</title>
+
+        <link rel="shortcut icon" href="assets/images/linkedin.png" />
+
+        <meta name="author" content="Gowthaman Thirunavukkarasu" />
+        <meta
+            name="description"
+            content="Instantly discover who posted that LinkedIn content first and who just pressed Ctrl+V. The ultimate utility for content justice."
+        />
+        <meta
+            name="keywords"
+            content="LinkedIn, Timestamp, Content Attribution, Originality Checker, Social Media Tool"
+        />
+
+        <meta
+            property="og:image"
+            content="https://gowthamant.github.io/who-posted-first-in-linkedin/assets/images/linkedin.png"
+        />
+        <meta
+            property="og:description"
+            content="Compare LinkedIn posts to find the original source."
+        />
+        <meta property="og:title" content="Who posted first in LinkedIn?" />
+        <meta
+            property="og:url"
+            content="https://gowthamant.github.io/who-posted-first-in-linkedin/"
+        />
+        <meta property="og:type" content="website" />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <main class="container">
+            <header class="hero">
+                <h1>Who posted first?</h1>
+                <p class="subtitle">Let's find out...</p>
+            </header>
+
+            <section class="input-card">
+                <div class="input-group">
+                    <input
+                        type="url"
+                        id="link1"
+                        placeholder="Paste the first LinkedIn URL here..."
+                        autocomplete="off"
+                    />
+                </div>
+
+                <div class="divider">
+                    <span>VS</span>
+                </div>
+
+                <div class="input-group">
+                    <input
+                        type="url"
+                        id="link2"
+                        placeholder="Paste the second LinkedIn URL here..."
+                        autocomplete="off"
+                    />
+                </div>
+
+                <button id="analyzeBtn" onclick="analyzeLinks()">
+                    Find the OG
+                </button>
+                <p id="error-msg" class="error hidden"></p>
+            </section>
+
+            <section id="results" class="results hidden">
+                <div class="verdict">
+                    <h2 id="verdict-title">The Verdict</h2>
+                    <p id="verdict-text">Calculating...</p>
+                </div>
+
+                <div class="comparison-grid">
+                    <div class="result-card" id="card1">
+                        <div class="badge" id="badge1"></div>
+                        <h3 class="username" id="user1">User 1</h3>
+                        <div class="time-data">
+                            <div class="time-row">
+                                <span class="label">Posted (Local)</span>
+                                <span class="value" id="local1">--</span>
+                            </div>
+                            <div class="time-row">
+                                <span class="label">Posted (UTC)</span>
+                                <span class="value" id="utc1">--</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-card" id="card2">
+                        <div class="badge" id="badge2"></div>
+                        <h3 class="username" id="user2">User 2</h3>
+                        <div class="time-data">
+                            <div class="time-row">
+                                <span class="label">Posted (Local)</span>
+                                <span class="value" id="local2">--</span>
+                            </div>
+                            <div class="time-row">
+                                <span class="label">Posted (UTC)</span>
+                                <span class="value" id="utc2">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p class="dev-credit">
+                Developed by <strong>Gowthaman Thirunavukkarasu</strong>.
+            </p>
+            <a
+                href="mailto:your-email@example.com?subject=Who posted it First utility feedback"
+                class="feedback-link"
+            >
+                Send Feedback
+            </a>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
